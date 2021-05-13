@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+ 
+ .staff-title {
+  
+   color: #ffffff;
+   margin-right: 50px;
+   text-align: center;
+   font-weight: 700;
+ }
+
+ .owner, .co-owner, .ceo, .coo {
+   color: #f12828;
+ }
+
+ .mod {
+   color: #ff7a08;
+ }
+
+ .nickname {
+   color: #ffffff;
+ }
+ @media screen and (max-width: 1000px){
+     body {
+     margin: 0;
+     padding: 0;
+     line-height: 1.6;
+     font-family: 'Noto Sans JP', sans-serif;
+     background: url(../img/portada.jpg) no-repeat center center fixed;
+     background-size: cover;
+     animation: movimiento 50s infinite linear alternate;
+   }
+   body:before {
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     z-index: -1;
+
+
+ }
+}
+.victorin{
+    height: 50%;
+    width: 35%;
+    align-items: center;
+
+}
+ @media screen and (max-height:850px) {
+
+   }
+   body {
+     margin: 0;
+     padding: 0;
+     line-height: 1.6;
+     font-family: 'Noto Sans JP', sans-serif;
+     background: url(../img/portada.jpg) no-repeat center center fixed;
+     background-size: cover;
+     animation: movimiento 50s infinite linear alternate;
+   }
+   body:before {
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 226%;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     z-index: -1;
+   }
+ 
+
+     
+ 

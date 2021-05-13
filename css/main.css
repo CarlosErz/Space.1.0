@@ -1,0 +1,441 @@
+ /*menu background y animaciones responsive desing*/
+
+ * {
+   margin: 0;
+   padding: 0;
+   text-transform: uppercase;
+ }
+
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+ html {
+   font-size: 62.5%;
+   box-sizing: border-box;
+ }
+
+ *, *::before, *::after {
+   box-sizing: inherit;
+ }
+
+ body {
+   margin: 0;
+   padding: 0;
+   line-height: 1.6;
+   font-family: 'Noto Sans JP', sans-serif;
+   background: url(../img/portada.jpg) no-repeat center center fixed;
+   background-size: cover;
+   animation: movimiento 50s infinite linear alternate;
+     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+ }
+
+ body:before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.8);
+   z-index: -1;
+ }
+
+ @keyframes movimiento {
+   from {
+     background-position: bottom left;
+   }
+   to {
+     background-position: top right;
+   }
+ }
+
+ .logo {
+   width: 350px;
+   height: 350px;
+ }
+
+ .menu {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   min-height: 8vh;
+   background: linear-gradient( 90deg, black, black);
+   box-shadow: 5px 0 10px rgba(25.5, 25.5, 25.5, 0.2)
+ }
+
+ .ham {
+   display: none;
+   background-color: transparent;
+   cursor: pointer;
+   border: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ .ham span {
+   background-color: #f3f3f3;
+   display: block;
+   height: 3px;
+   width: 28px;
+   margin: 10px auto;
+   border-radius: 2px;
+ }
+
+ .enlaces-menu {
+   display: flex;
+   padding: 0;
+   z-index: 2;
+ }
+
+ .enlaces-menu li {
+   padding: 0 40px;
+   list-style-type: none;
+   transition: 0.3s;
+ }
+
+ .enlaces-menu li a {
+   text-decoration: none;
+   font-size: 1.8rem;
+   color: #f3f3f3;
+   font-weight: 600;
+ }
+
+ .enlaces-menu li:hover {
+   background-color: rgb(23.57, 51.203, 78.43);
+ }
+
+ .block-bg p {
+   color: #ffffff;
+ }
+
+ .block-bg a {
+   color: aqua;
+ }
+
+ .block-bg {
+   background-color: rgba(0, 0, 0, 0.4);
+   position:fixed;
+   width: 100%;
+   bottom: -30%;
+ }
+
+ hr.bartopindev {
+   margin-bottom: -14px;
+ }
+
+
+
+ /* DISPOSITIVOS MOVILES */
+
+ @media screen and (max-height:850px) {
+   .block-bg {
+     bottom: -23;
+   }
+   body {
+     margin: 0;
+     padding: 0;
+     line-height: 1.6;
+     font-family: 'Noto Sans JP', sans-serif;
+     background: url(../img/portada.jpg) no-repeat center center fixed;
+     background-size: cover;
+     animation: movimiento 50s infinite linear alternate;
+   }
+   body:before {
+     content: "";
+     position: fixed;
+     left: 0;
+     top: 0;
+    height: 126%;
+     width: 50%;
+     background-color: rgba(0, 0, 0, 0.8);
+     z-index: -1;
+   }
+
+ .block-bg {
+   background-color: rgba(0, 0, 0, 0.664);
+   position:fixed;
+   width: 100%;
+   bottom: -30%;
+ }
+ }
+
+ @media screen and (max-width:850px) {
+   body {
+     overflow: hidden;
+   }
+   .ham {
+     display: block;
+     cursor: pointer;
+     position: absolute;
+     top: 15px;
+     right: 25px;
+     z-index: 99999;
+     transition: 0.2s 0.1s;
+     top: 5px;
+   }
+   .menu {
+     flex-direction: column;
+     align-items: flex-start;
+     padding-top: 25px;
+     padding-bottom: 25px;
+     height: 100%;
+   }
+   .logo {
+     width: 50%;
+     height: 50%;
+   }
+   .enlaces-menu {
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     height: 92vh;
+     margin: 0;
+     padding: 0;
+     display: none;
+     opacity: 0;
+     transition: opacity 5s ease-out;
+     width: 100%;
+     z-index: 2;
+   }
+   .enlaces-menu li {
+     text-align: center;
+     width: 100%;
+     padding: 20px;
+   }
+   .block-bg {
+     bottom: -20%;
+   }
+   body {
+     margin: 0;
+     padding: 0;
+     line-height: 1.6;
+     font-family: 'Noto Sans JP', sans-serif;
+     background: url(../img/register.jpg) no-repeat center center fixed;
+     background-size: cover;
+     background-attachment: fixed;
+     animation: movimiento 50s infinite linear alternate;
+     overflow: auto;
+   }
+   body:before {
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 120%;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     z-index: -1;
+   }
+ }
+
+ /* Animaciones */
+
+ @keyframes muestraMenu {
+   from {
+     opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+ }
+
+ @-webkit-keyframes scale-in-center {
+   0% {
+     -webkit-transform: scale(0);
+     transform: scale(0);
+     opacity: 1
+   }
+   100% {
+     -webkit-transform: scale(1);
+     transform: scale(1);
+     opacity: 1
+   }
+ }
+
+ @keyframes scale-in-center {
+   0% {
+     -webkit-transform: scale(0);
+     transform: scale(0);
+     opacity: 1
+   }
+   100% {
+     -webkit-transform: scale(1);
+     transform: scale(1);
+     opacity: 1
+   }
+ }
+
+ @keyframes float {
+   0% {
+     transform: translate(0px, 0px);
+   }
+   50% {
+     transform: translate(0px, -10px);
+   }
+   100% {
+     transform: translate(0px, 0px);
+   }
+ }
+
+ @keyframes fadeIn {
+   from {
+     opacity: 0
+   }
+   to {
+     opacity: 1
+   }
+ }
+
+ @keyframes fadeOut {
+   from {
+     opacity: 1
+   }
+   to {
+     opacity: 0
+   }
+ }
+
+ .enlaces-menu.activado {
+   display: flex;
+   animation: muestraMenu 350ms ease-in-out both;
+ }
+
+ .br-1.animado {
+   transform: rotate(-45deg) translate(-10px, 8px);
+ }
+
+ .br-2.animado {
+   opacity: 0;
+ }
+
+ .br-3.animado {
+   transform: rotate(45deg) translate(-10px, -8px);
+ }
+
+ .ham.girar:hover {
+   transform: rotate(360deg);
+   z-index: 9999999;
+ }
+
+ /*menu background y animaciones responsive desing*/
+
+ /*CONTENIDO DE LA PAGINA H1 H2 COMENTARIOS ETC*/
+
+ .contenido {
+   width: 100%;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   text-align: center;
+   color: #fff;
+   z-index: -1;
+ }
+
+ .contenido h1 {
+   font-size: 60px;
+   font-family: sans-serif;
+ }
+
+ .contenido p {
+   margin: 20px auto;
+   font-weight: 100;
+   line-height: 25px;
+   font-size: 17px;
+   font-family: sans-serif;
+ }
+
+ /*MISMO CONTENIDO DIFERENTE CLASE*/
+
+ .botones button {
+   width: 200px;
+   padding: 15px 0;
+   text-align: center;
+   margin: 20px 10px;
+   border-radius: 25px;
+   font-weight: bold;
+   border: 2px solid #18334e;
+   background: transparent;
+   color: white;
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;
+   font-family: sans-serif;
+ }
+
+ .botones2 button {
+   width: 200px;
+   padding: 15px 0;
+   text-align: center;
+   margin: 20px 10px;
+   border-radius: 25px;
+   font-weight: bold;
+   border: 2px solid #18334e;
+   background: transparent;
+   color: white;
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;
+   font-family: sans-serif;
+ }
+
+ .botones button span {
+   background: #18334e;
+   height: 100%;
+   width: 0;
+   border-radius: 25px;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   z-index: -1;
+   transition: 0.5s;
+ }
+
+ .botones2 button span {
+   background: #18334e;
+   height: 100%;
+   width: 0;
+   border-radius: 25px;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   z-index: -1;
+   transition: 0.5s;
+ }
+
+ .botones button:hover span {
+   width: 100%;
+ }
+
+ .botones button:hover {
+   border: none;
+ }
+
+ .botones2 button:hover span {
+   width: 100%;
+ }
+
+ .botones2 button:hover {
+   border: none;
+ }
+
+ @media screen and (max-width: 1617px) {
+   body {
+     margin: 0;
+     padding: 0;
+     line-height: 1.6;
+     font-family: 'Noto Sans JP', sans-serif;
+     background: url(../img/portada.jpg) no-repeat center center fixed;
+     background-size: cover;
+     animation: movimiento 50s infinite linear alternate;
+     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+     overflow: auto;
+   }
+   body:before {
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     z-index: -ur1v
+   }
+ }
